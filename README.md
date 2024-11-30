@@ -1,3 +1,5 @@
+<img src='https://github.com/fabiomatricardi/NuEtract1.5-streamlit/raw/main/article_logo.png' width=900>
+
 # NuEtract1.5-stramlit
 simple use of LLM extracting structured data from plain text
 
@@ -11,9 +13,7 @@ To use the model, provide an input text and a JSON template describing the infor
 
 Check out the blog post.
 
-Try the 3.8B model here: Playground
-
-We also provide a tiny (0.5B) version which is based on Qwen2.5-0.5B: NuExtract-tiny-v1.5
+It is also provided a tiny (0.5B) version which is based on Qwen2.5-0.5B: NuExtract-tiny-v1.5
 
 > ⚠️ We recommend using NuExtract with a temperature at or very close to 0. Some inference frameworks, such as Ollama, use a default of 0.7 which is not well suited to pure extraction tasks.
 
@@ -35,9 +35,12 @@ Extract the content into a subfolder called `llama.cpp`
 
 ---
 
+<img src='https://github.com/fabiomatricardi/NuEtract1.5-streamlit/raw/main/savetheModelsDir.png' width=900>
+
 Download the models in the subfolder `llama.cpp\model`
 - [NuExtract-1.5-smol-Q5_K_L.gguf](https://huggingface.co/bartowski/NuExtract-1.5-smol-GGUF/resolve/main/NuExtract-1.5-smol-Q5_K_L.gguf)
 - [numind.NuExtract-tiny-v1.5.Q8_0.gguf](https://huggingface.co/DevQuasar/numind.NuExtract-tiny-v1.5-GGUF/resolve/main/numind.NuExtract-tiny-v1.5.Q8_0.gguf)
+
 
 ### Usage
 In one terminal window, inside the `llama.cpp` directory run
@@ -49,6 +52,8 @@ In one terminal window, inside the `llama.cpp` directory run
 ```
 .\llama-server.exe --port 8001 -m .\model\NuExtract-1.5-smol-Q5_K_L.gguf -ngl 25 -c 8196
 ```
+<img src='https://github.com/fabiomatricardi/NuEtract1.5-streamlit/raw/main/2windows.png' width=900>
+
 
 In another terminal window from the main project directory with the venv activated run
 ```
@@ -58,6 +63,9 @@ streamlit run .\stapp1.5-nuextractSMOL.py
 streamlit run .\stapp1.5-nuextractTINY.py
 ```
 
+This the final running app
+
+<img src='https://github.com/fabiomatricardi/NuEtract1.5-streamlit/raw/main/running_app.png' width=900>
 
 
 
